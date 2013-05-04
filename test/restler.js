@@ -387,7 +387,7 @@ module.exports['Deserialization'] = {
 
   'Should parse XML': function(test) {
     rest.get(host + '/xml').on('complete', function(data, response) {
-      test.equal(data.ok, 'true', 'returned: ' + response.raw + ' || ' + p(data));
+      test.equal(data.document.ok, 'true', 'returned: ' + response.raw + ' || ' + p(data));
       test.done();
     });
   },
